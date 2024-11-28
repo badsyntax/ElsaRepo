@@ -1,9 +1,9 @@
 ﻿using Elsa.Extensions;
-using Elsa.Workflows.Contracts;
-using Elsa.Workflows.Runtime.Contracts;
+using Elsa.Workflows;
+using Elsa.Workflows.Management;
+using Elsa.Workflows.Runtime;
 using ElsaConsole;
 using Microsoft.Extensions.DependencyInjection;
-using Elsa.Workflows.Management.Contracts;
 var services = new ServiceCollection();
 
 // Add Elsa services to the container.
@@ -19,8 +19,6 @@ var registriesPopulator = serviceProvider.GetRequiredService<IRegistriesPopulato
 await registriesPopulator.PopulateAsync();
 
 var workflowRunner = serviceProvider.GetRequiredService<IWorkflowRunner>(); // Or inject it in your constructor.
-
-var workflowSerializer = serviceProvider.GetRequiredService<IWorkflowSerializer>();
 var workflowBuilderFactory = serviceProvider.GetRequiredService<IWorkflowBuilderFactory>();
 
 await Example_MassiveDataSet.Run_Example1(workflowBuilderFactory, workflowRunner);

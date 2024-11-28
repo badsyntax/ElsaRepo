@@ -1,7 +1,7 @@
 using System.Text.Json;
+using Elsa.Workflows;
 using Elsa.Workflows.Activities;
 using Elsa.Workflows.Activities.Flowchart.Activities;
-using Elsa.Workflows.Contracts;
 
 namespace ElsaConsole
 {
