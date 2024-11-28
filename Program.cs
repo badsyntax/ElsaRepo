@@ -24,4 +24,4 @@ var workflowSerializer = serviceProvider.GetRequiredService<IWorkflowSerializer>
 var workflowBuilderFactory = serviceProvider.GetRequiredService<IWorkflowBuilderFactory>();
 
 await Example_MassiveDataSet.Run_Example1(workflowBuilderFactory, workflowRunner);
-await Example_MassiveDataSet.Run_Example2(workflowBuilderFactory, workflowRunner);
+// await Example_MassiveDataSet.Run_Example2(workflowBuilderFactory, workflowRunner);
