@@ -10,14 +10,14 @@ var services = new ServiceCollection();
 // Add Elsa services to the container.
 services.AddElsa(elsa =>
 {
-   elsa.UseWorkflows(workflows =>
-    {
-        workflows.WithWorkflowExecutionPipeline(pipeline => pipeline
-            .Reset()
-            .UseEngineExceptionHandling()
-            .UseExceptionHandling()
-            .UseDefaultActivityScheduler());
-    });
+//    elsa.UseWorkflows(workflows =>
+//     {
+//         workflows.WithWorkflowExecutionPipeline(pipeline => pipeline
+//             .Reset()
+//             .UseEngineExceptionHandling()
+//             .UseExceptionHandling()
+//             .UseDefaultActivityScheduler());
+//     });
 });
 
 // Build the service container.
